@@ -1,10 +1,4 @@
-# Md. Eftakhar Amin Sakib - Personal Portfolio & Creative Studio
-
-A modern neo-brutalist interactive developer portfolio and content management system. Built with vanilla web technologies, Web Audio synthesis, Cloudflare R2 object storage, Firebase real-time database support, and custom interactive components.
-
----
-
-## Overview
+# Personal Portfolio 
 
 This project is a personal portfolio website designed for full-stack developers, creative engineers, and digital designers. It combines a unique neo-brutalist aesthetic with built-in administrative tools to manage content without rebuilding or editing code.
 
@@ -75,9 +69,3 @@ You can deploy this repository to any static hosting provider:
 - **Firebase Hosting**: Run `firebase init hosting` and `firebase deploy`.
 
 ---
-
-## Author & Contact
-
-Designed and developed by **Md. Eftakhar Amin Sakib**.
-- **GitHub**: https://github.com/EFTAKHAR-AMIN-SAKIB
-- **LinkedIn**: https://www.linkedin.com/in/md-eftakhar-amin-sakib
