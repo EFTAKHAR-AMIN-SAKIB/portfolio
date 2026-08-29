@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Eftakhar Amin Sakib — Portfolio</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Personal portfolio of Md. Eftakhar Amin Sakib — Full-Stack Developer, Creative Designer & Video Editor.">
+  <meta name="theme-color" content="#FAF5E8">
+
+  <!-- Neo-Brutalist Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%23FFD84D%22 stroke=%22%23111111%22 stroke-width=%228%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 font-family=%22sans-serif%22 font-weight=%22900%22 text-anchor=%22middle%22 fill=%22%23111111%22>✦</text></svg>">
+  
+  <!-- Google Fonts: Space Grotesk, Bricolage Grotesque, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for crisp UI icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Neo-Brutalist Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=4.7">
+</head>
+<body>
+
+  <!-- Ambient Interactive Canvas & Dot Grid Matrix -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-brand-left">
+      <div class="status-badge" id="status-badge-container">
+        <span class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-ping"></span>
+        </span>
+        <span id="header-status-text">Available for Opportunities</span>
+      </div>
+
+      <!-- Live Total Visitor Counter Button -->
+      <button id="visitor-counter-btn" class="utility-btn visitor-counter-pill" aria-label="Portfolio Visitor Count" title="Live Total Visitor Counter">
+        <span class="visitor-pulse-dot">
+          <span class="pulse-ring"></span>
+          <i class="fa-solid fa-eye"></i>
+        </span>
+        <span class="visitor-label">Visitors:</span>
+        <span id="visitor-count-number" class="visitor-count-badge">...</span>
+        <span id="visitor-admin-tag" class="visitor-admin-tag" title="Hidden from public — Visible only to Admin">🔒 Admin</span>
+      </button>
+    </div>
+    
+    <div class="nav-actions">
+      <!-- Quick Coffee Support Link -->
+      <a href="https://buymeacoffee.com" id="coffee-nav-btn" class="utility-btn coffee-nav-btn" target="_blank" rel="noopener noreferrer" title="Support creator with a coffee">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span>Coffee ☕</span>
+      </a>
+
+      <!-- Resume / CV Download Button -->
+      <a href="#" id="resume-download-btn" class="utility-btn resume-btn" target="_blank" rel="noopener noreferrer" title="View or Download Resume">
+        <i class="fa-solid fa-file-arrow-down"></i>
+        <span>Resume / CV</span>
+      </a>
+
+      <!-- Audio Feedback Toggle -->
+      <button id="sound-toggle" class="utility-btn" aria-label="Toggle sound effects" title="Toggle audio feedback">
+        <i class="fa-solid fa-volume-high" id="sound-icon"></i>
+        <span>Sound: ON</span>
+      </button>
+
+      <!-- Secret Code / Admin Access Button -->
+      <button id="admin-auth-btn" class="utility-btn admin-pill secret-door-trigger" aria-label="Secret Portal Access" title="Click to open Anywhere Door Secret Portal">
+        <i class="fa-solid fa-door-closed" id="admin-btn-icon"></i>
+        <span id="admin-btn-text">Secret Code</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Interactive Viewport Container -->
+  <main class="portfolio-container" id="app">
+    
+    <!-- Hero Profile Section -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Avatar with Neo-Brutalist Lavender Circle & Dotted Aura -->
+      <div class="avatar-wrapper" id="avatar-frame">
+        <div class="avatar-aura-ring" aria-hidden="true"></div>
+        <div class="avatar-inner">
+          <img 
+            src="Minimalist Lavender Circle Portrait.png" 
+            alt="Portrait of Md. Eftakhar Amin Sakib" 
+            class="avatar-img"
+            id="hero-avatar-img"
+            fetchpriority="high"
+            loading="eager"
+          />
+        </div>
+        <div class="avatar-badge" title="Verified Creator">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+      </div>
+
+      <!-- Identity & Pitch (Polished Neo-Brutalist Name Box) -->
+      <div class="hero-content">
+        
+        <div class="hero-name-card" id="hero-name-container">
+          <h1 class="hero-name-primary" id="hero-name-line1">MD. EFTAKHAR</h1>
+          <div class="hero-name-secondary">
+            <span class="name-part-white" id="hero-name-line2">AMIN</span>
+            <span class="name-part-yellow" id="hero-name-line3">SAKIB</span>
+          </div>
+        </div>
+
+        <div class="hero-role-badge" id="hero-role-badge">
+          <i class="fa-solid fa-code"></i>
+          <span id="hero-role-text">Full-Stack Developer & Creative Engineer</span>
+        </div>
+
+        <p class="hero-bio" id="hero-bio-text">
+          Crafting scalable web applications, fluid interactive user experiences, video edits, and digital visuals with clean architecture and precision motion.
+        </p>
+
+        <!-- Refined Metric Stats Banner -->
+        <div class="stats-banner-row" id="stats-banner-container">
+          <!-- Dynamically populated from JS State -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Master Interactive Capsules Navigation Section -->
+    <nav class="capsule-nav-section" aria-label="Portfolio Explorer">
+      
+      <!-- ROW 1: 3 Primary Master Capsules -->
+      <div class="capsules-track" id="capsules-track">
+        
+        <!-- Capsule 1: Projects -->
+        <button 
+          class="capsule-trigger" 
+          id="btn-projects" 
+          data-target="panel-projects" 
+          aria-expanded="false" 
+          aria-controls="panel-projects"
+        >
+          <div class="capsule-icon-wrap">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="capsule-info">
+            <span class="capsule-title">Featured Projects</span>
+            <span class="capsule-sub">Web Apps & Systems</span>
+          </div>
+          <span class="capsule-badge" id="count-projects">4</span>
+          <i class="fa-solid fa-chevron-down capsule-arrow"></i>
+        </button>
+
+        <!-- Capsule 2: Achievements -->
+        <button 
+          class="capsule-trigger" 
+          id="btn-achievements" 
+          data-target="panel-achievements" 
+          aria-expanded="false" 
+          aria-controls="panel-achievements"
+        >
+          <div class="capsule-icon-wrap">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="capsule-info">
+            <span class="capsule-title">Achievements</span>
+            <span class="capsule-sub">Milestones & Honors</span>
+          </div>
+          <span class="capsule-badge" id="count-achievements">4</span>
+          <i class="fa-solid fa-chevron-down capsule-arrow"></i>
+        </button>
+
+        <!-- Capsule 3: Social & Connect -->
+        <button 
+          class="capsule-trigger" 
+          id="btn-social" 
+          data-target="panel-social" 
+          aria-expanded="false" 
+          aria-controls="panel-social"
+        >
+          <div class="capsule-icon-wrap">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <div class="capsule-info">
+            <span class="capsule-title">Connect & Socials</span>
+            <span class="capsule-sub">Inquiries & Networks</span>
+          </div>
+          <span class="capsule-badge" id="count-socials">5</span>
+          <i class="fa-solid fa-chevron-down capsule-arrow"></i>
+        </button>
+
+      </div>
+
+      <!-- ROW 2: CENTERED UNDER 3 OPTIONS -> Media & Design Studio -->
+      <div class="media-design-capsule-wrap">
+        <button 
+          class="capsule-trigger media-center-trigger" 
+          id="btn-media" 
+          data-target="panel-media" 
+          aria-expanded="false" 
+          aria-controls="panel-media"
+        >
+          <div class="capsule-icon-wrap media-icon-box">
+            <i class="fa-solid fa-clapperboard"></i>
+          </div>
+          <div class="capsule-info">
+            <div class="capsule-title-row">
+              <span class="capsule-title">Media & Design Studio</span>
+              <span class="media-sub-pill">🎬 2 SUB-CHANNELS</span>
+            </div>
+            <span class="capsule-sub">Video Edits • Social Banners • Posters • UI/UX Visuals</span>
+          </div>
+          <span class="capsule-badge media-badge-count" id="count-media">4</span>
+          <i class="fa-solid fa-chevron-down capsule-arrow"></i>
+        </button>
+      </div>
+
+    </nav>
+
+    <!-- ================= PLAYGROUND: "Small experiments, strange ideas & interactive things" ================= -->
+    <section class="playground-wrapper" id="playground-container" aria-label="Interactive Playground">
+      
+      <!-- 1. COMPACT CLOSED TEASER STATE -->
+      <div class="playground-teaser-card" id="playground-teaser-card" role="button" tabindex="0" aria-expanded="false" aria-controls="playground-expanded-panel">
+        <div class="playground-teaser-left">
+          <span class="playground-badge-pill">
+            <i class="fa-solid fa-sparkles"></i> 02 EXPERIMENTS
+          </span>
+          <div class="playground-teaser-info">
+            <h3 class="playground-teaser-title">✦ PLAYGROUND</h3>
+            <p class="playground-teaser-sub">Small experiments, strange ideas & interactive things.</p>
+          </div>
+        </div>
+        <div class="playground-enter-btn">
+          <span>ENTER →</span>
+        </div>
+      </div>
+
+      <!-- 2. EXPANDED PLAYGROUND PANEL (Spatial in-place growth) -->
+      <div class="playground-expanded-panel" id="playground-expanded-panel" hidden>
+        
+        <!-- Header Bar -->
+        <div class="playground-header-bar">
+          <div class="playground-heading-group">
+            <span class="playground-badge-pill">✦ LAB</span>
+            <div>
+              <h3 class="playground-header-title">PLAYGROUND</h3>
+              <p class="playground-header-sub">Small experiments, strange ideas & interactive things.</p>
+            </div>
+          </div>
+          <div class="playground-nav-actions">
+            <button class="playground-btn-nav" id="btn-playground-back" style="display: none;">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Back</span>
+            </button>
+            <button class="playground-btn-nav close-btn" id="btn-playground-close" title="Close Playground (Esc)">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Close</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIEW A: EXPERIMENTS DIRECTORY -->
+        <div class="experiments-directory-view" id="experiments-directory-view">
+          <div class="experiments-grid">
+            
+            <!-- Experiment 01: DON'T CLICK (Playable) -->
+            <article class="experiment-item-card" id="card-exp-dont-click" data-exp="dont-click" tabindex="0" role="button">
+              <div class="exp-num-badge">01</div>
+              <h4 class="exp-card-title">DON'T CLICK</h4>
+              <p class="exp-card-desc">A self-defending button that refuses to be clicked. It will dodge, clone, insult, and flee.</p>
+              <div class="exp-card-footer">
+                <span class="exp-best-badge" id="badge-dont-click-best">Clicks: 0</span>
+                <span class="exp-action-btn">PLAY →</span>
+              </div>
+            </article>
+
+            <!-- Experiment 02: MEMORY OVERCLOCK (Playable) -->
+            <article class="experiment-item-card" id="card-exp-memory" data-exp="memory-game" tabindex="0" role="button">
+              <div class="exp-num-badge" style="background: var(--pop-cyan);">02</div>
+              <h4 class="exp-card-title">MEMORY OVERCLOCK</h4>
+              <p class="exp-card-desc">Match 8 pairs of developer tech cards before time runs out. Speed, combos & kinetic flips.</p>
+              <div class="exp-card-footer">
+                <span class="exp-best-badge" id="badge-memory-best">Best: --:--</span>
+                <span class="exp-action-btn">PLAY →</span>
+              </div>
+            </article>
+
+            <!-- Experiment 03: Coming Soon -->
+            <article class="experiment-item-card locked" title="In Active R&D">
+              <div class="exp-num-badge" style="background: #E4E4E7;">03</div>
+              <h4 class="exp-card-title">SPATIAL GRAVITY LAB</h4>
+              <p class="exp-card-desc">Kinetic physics, spring masses and interactive gravity simulations.</p>
+              <div class="exp-card-footer">
+                <span class="exp-best-badge">COMING SOON</span>
+                <span class="exp-action-btn" style="background: #71717A;">LOCKED</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- VIEW B: EXPERIMENT 01: "DON'T CLICK" -->
+        <div class="dont-click-view" id="dont-click-view" style="display: none;">
+          
+          <!-- HUD Meta Row -->
+          <div class="exp-meta-row">
+            <div class="exp-hud-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Button Mood:</span>
+              <span class="exp-hud-val" id="dc-mood-val">DEFENSIVE 🛡️</span>
+            </div>
+            <div class="exp-hud-item">
+              <i class="fa-solid fa-hand-pointer"></i>
+              <span>Dodges:</span>
+              <span class="exp-hud-val" id="dc-dodges-count">0</span>
+            </div>
+            <div class="exp-hud-item">
+              <i class="fa-solid fa-stopwatch"></i>
+              <span>Time:</span>
+              <span class="exp-hud-val" id="dc-timer">00:00</span>
+            </div>
+          </div>
+
+          <!-- Rules Callout -->
+          <div class="exp-rules-callout">
+            <h4 class="exp-rules-title">TRY TO CLICK THE BUTTON</h4>
+            <p class="exp-rules-body">
+              The button is programmed to resist all interaction. Corner it, outsmart its evasion phases, and click it!
+            </p>
+          </div>
+
+          <!-- Interactive Physics Arena -->
+          <div class="dont-click-arena" id="dont-click-arena">
+            <div class="dont-click-dialog-bubble" id="dc-speech-bubble">Don't even think about it. ✋</div>
+            <button type="button" class="dont-click-btn-target" id="dc-target-btn">
+              <i class="fa-solid fa-ban"></i>
+              <span id="dc-btn-text">DON'T CLICK ME</span>
+            </button>
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="exp-controls-bar">
+            <button class="exp-btn clear-btn" id="btn-dc-reset">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Reset Button</span>
+            </button>
+            <button class="exp-btn" id="btn-dc-back">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Playground</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- VIEW C: EXPERIMENT 02: "MEMORY OVERCLOCK" -->
+        <div class="memory-game-view" id="memory-game-view" style="display: none;">
+          
+          <!-- HUD Meta Row -->
+          <div class="exp-meta-row">
+            <div class="exp-hud-item">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Matches:</span>
+              <span class="exp-hud-val" id="mem-matches-count">0 / 8</span>
+            </div>
+            <div class="exp-hud-item">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <span>Flips:</span>
+              <span class="exp-hud-val" id="mem-flips-count">0</span>
+            </div>
+            <div class="exp-hud-item">
+              <i class="fa-solid fa-stopwatch"></i>
+              <span>Timer:</span>
+              <span class="exp-hud-val" id="mem-timer">00:00</span>
+            </div>
+          </div>
+
+          <!-- Rules Callout -->
+          <div class="exp-rules-callout">
+            <h4 class="exp-rules-title">MEMORY OVERCLOCK</h4>
+            <p class="exp-rules-body">
+              Flip the cards and find all 8 developer technology pairs in record time!
+            </p>
+          </div>
+
+          <!-- 4x4 16 Cards Interactive Grid -->
+          <div class="memory-grid-16" id="memory-grid-container">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="exp-controls-bar">
+            <button class="exp-btn clear-btn" id="btn-mem-reset">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Restart Matrix</span>
+            </button>
+            <button class="exp-btn" id="btn-mem-back">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Playground</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- VIEW D: SHARED EXPERIMENT SUCCESS & SUPPORT CTA -->
+        <div class="exp-success-panel" id="exp-success-panel" style="display: none;">
+          <div class="success-badge-icon">✦</div>
+          
+          <div class="easter-egg-banner" id="easter-egg-banner" style="display: none;">
+            ⚡ PERSISTENCE LEVEL: 9999 • ABSOLUTE RESPECT!
+          </div>
+
+          <h3 class="success-headline" id="success-headline">EXPERIMENT CONQUERED!</h3>
+
+          <div class="success-stat-chips" id="success-stat-chips">
+            <!-- Dynamic stats rendered here -->
+          </div>
+
+          <div class="personal-philosophy-card" id="success-philosophy-text">
+            "That's the kind of persistence I like. Difficult edge cases require patience, curiosity, and creative problem-solving. That's also how I approach the software I build."
+          </div>
+
+          <!-- Natural, Optional Coffee Invitation -->
+          <div class="coffee-invitation-card">
+            <h4 class="coffee-invite-title">ENJOYED THE EXPERIMENT?</h4>
+            <p class="coffee-invite-text">
+              I build quirky interactive experiments when I'm not developing production systems. If you want to keep the experiments alive:
+            </p>
+            
+            <div class="coffee-action-row">
+              <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer" class="btn-coffee-support" id="btn-support-coffee">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Fuel the next experiment ☕</span>
+              </a>
+              <button type="button" class="exp-btn" id="btn-success-play-again">
+                <i class="fa-solid fa-rotate-right"></i>
+                <span>Play Again</span>
+              </button>
+              <button type="button" class="exp-btn" id="btn-success-back-playground">
+                <i class="fa-solid fa-flask"></i>
+                <span>Playground</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Kinetic Cascade Display Arena (Projects, Media & Design, Achievements, Socials) -->
+    <div class="cascade-arena" id="cascade-arena">
+      
+      <!-- ================= SECTION 1: PROJECTS ================= -->
+      <section 
+        class="cascade-panel" 
+        id="panel-projects" 
+        role="region" 
+        aria-labelledby="btn-projects" 
+        hidden
+      >
+        <div class="panel-header">
+          <div class="panel-heading-wrap">
+            <span class="panel-sub">Selected Builds</span>
+            <h2 class="panel-title">Featured Works & Systems</h2>
+          </div>
+          <div class="panel-actions-wrap">
+            <button class="panel-action-btn add-btn admin-only-btn" data-add="project" title="Add New Project">
+              <i class="fa-solid fa-plus"></i>
+              <span>Add Project</span>
+            </button>
+            <button class="panel-action-btn panel-close-btn" data-close="panel-projects" aria-label="Close projects panel">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Collapse</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cards-grid projects-grid" id="projects-grid-container">
+          <!-- Dynamically populated from JS state -->
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: MEDIA & DESIGN STUDIO (2 SUB-OPTIONS: MEDIA & DESIGN) ================= -->
+      <section 
+        class="cascade-panel" 
+        id="panel-media" 
+        role="region" 
+        aria-labelledby="btn-media" 
+        hidden
+      >
+        <div class="panel-header media-panel-header">
+          <div class="media-panel-header-top">
+            <div class="panel-heading-wrap">
+              <span class="panel-sub" style="background: var(--pop-lavender);">Creative Studio</span>
+              <h2 class="panel-title">Media & Design Journey</h2>
+            </div>
+
+            <div class="panel-actions-wrap">
+              <button class="panel-action-btn add-btn admin-only-btn" data-add="media" title="Add Media/Design Work">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Work</span>
+              </button>
+              <button class="panel-action-btn panel-close-btn" data-close="panel-media" aria-label="Close media panel">
+                <i class="fa-solid fa-xmark"></i>
+                <span>Collapse</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Channel Filters (All, Videos, Posters, Banners/UI) -->
+          <div class="media-sub-filter-bar">
+            <button class="media-filter-btn active" data-media-filter="all">
+              <span>✦ All (<span id="filter-count-all">0</span>)</span>
+            </button>
+            <button class="media-filter-btn" data-media-filter="video">
+              <i class="fa-solid fa-film"></i>
+              <span>Videos & Reels (<span id="filter-count-video">0</span>)</span>
+            </button>
+            <button class="media-filter-btn" data-media-filter="poster">
+              <i class="fa-solid fa-image"></i>
+              <span>Posters & Art (<span id="filter-count-poster">0</span>)</span>
+            </button>
+            <button class="media-filter-btn" data-media-filter="banner">
+              <i class="fa-solid fa-cubes-stacked"></i>
+              <span>Banners & UI (<span id="filter-count-banner">0</span>)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid for Media & Design Cards -->
+        <div class="cards-grid media-grid" id="media-grid-container">
+          <!-- Dynamically populated from JS state -->
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: ACHIEVEMENTS ================= -->
+      <section 
+        class="cascade-panel" 
+        id="panel-achievements" 
+        role="region" 
+        aria-labelledby="btn-achievements" 
+        hidden
+      >
+        <div class="panel-header">
+          <div class="panel-heading-wrap">
+            <span class="panel-sub">Honors & Certs</span>
+            <h2 class="panel-title">Achievements & Milestones</h2>
+          </div>
+          <div class="panel-actions-wrap">
+            <button class="panel-action-btn add-btn admin-only-btn" data-add="achievement" title="Add New Achievement">
+              <i class="fa-solid fa-plus"></i>
+              <span>Add Achievement</span>
+            </button>
+            <button class="panel-action-btn panel-close-btn" data-close="panel-achievements" aria-label="Close achievements panel">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Collapse</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cards-grid achievements-grid" id="achievements-grid-container">
+          <!-- Dynamically populated from JS state -->
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: SOCIAL & CONNECT ================= -->
+      <section 
+        class="cascade-panel" 
+        id="panel-social" 
+        role="region" 
+        aria-labelledby="btn-social" 
+        hidden
+      >
+        <div class="panel-header">
+          <div class="panel-heading-wrap">
+            <span class="panel-sub">Direct Channel</span>
+            <h2 class="panel-title">Let’s Connect & Collaborate</h2>
+          </div>
+          <div class="panel-actions-wrap">
+            <button class="panel-action-btn add-btn admin-only-btn" data-add="social" title="Add New Social Link">
+              <i class="fa-solid fa-plus"></i>
+              <span>Add Link</span>
+            </button>
+            <button class="panel-action-btn panel-close-btn" data-close="panel-social" aria-label="Close connect panel">
+              <i class="fa-solid fa-xmark"></i>
+              <span>Collapse</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cards-grid social-grid" id="social-grid-container">
+          <!-- Dynamically populated from JS state -->
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Quick Footer Status -->
+    <footer class="viewport-footer">
+      <div class="footer-badge">
+        <span class="kbd-hint" id="kbd-hint-projects"><kbd>1</kbd> Projects</span>
+        <span class="kbd-hint" id="kbd-hint-achievements"><kbd>2</kbd> Achievements</span>
+        <span class="kbd-hint" id="kbd-hint-socials"><kbd>3</kbd> Connect</span>
+        <span class="kbd-hint" id="kbd-hint-media"><kbd>4</kbd> Media & Design</span>
+        <span class="kbd-hint" id="kbd-hint-esc"><kbd>Esc</kbd> Collapse</span>
+      </div>
+      <p class="copyright-note">
+        Crafted with Precision • Md. Eftakhar Amin Sakib &copy; <span id="year-span">2026</span>
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- ================= MODAL 1: DETAIL VIEWER (Projects & Media) ================= -->
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-content-card">
+      
+      <button class="modal-close-icon" id="modal-close-btn" aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header-banner" id="modal-banner">
+        <div class="modal-banner-badge" id="modal-category">Full-Stack Application</div>
+        <h2 class="modal-title" id="modal-title">Project Title</h2>
+      </div>
+
+      <div class="modal-scrollable-body">
+        <!-- Interactive Cinema Video Player & High-Res Image Showcase Stage -->
+        <div class="modal-media-stage" id="modal-media-stage" style="display: none;">
+          <!-- Dynamically populated: 16:9 Video iframe, HTML5 video player, or Zoomable High-Res Image -->
+        </div>
+
+        <p class="modal-summary" id="modal-summary">Detailed description of the project.</p>
+        
+        <div class="modal-feature-block">
+          <h4 class="modal-section-heading">Key Highlights & Specifications</h4>
+          <ul class="modal-feature-list" id="modal-features">
+            <!-- Dynamic items -->
+          </ul>
+        </div>
+
+        <div class="modal-tech-block">
+          <h4 class="modal-section-heading">Tools & Technologies Utilized</h4>
+          <div class="modal-tech-pills" id="modal-techs">
+            <!-- Dynamic tech pills -->
+          </div>
+        </div>
+
+        <div class="modal-actions-row">
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn-primary modal-action-btn" id="modal-live-link">
+            <i class="fa-solid fa-globe"></i>
+            <span id="modal-live-link-text">Live View</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-video modal-action-btn" id="modal-video-link" style="display: none;">
+            <i class="fa-solid fa-circle-play"></i>
+            <span id="modal-video-link-text">Video Demo</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary modal-action-btn" id="modal-code-link">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub Code</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- ================= MODAL: 3D MAGIC ANYWHERE DOOR SECRET PORTAL ================= -->
+  <dialog id="anywhere-door-modal" class="anywhere-door-modal" aria-labelledby="door-modal-title">
+    <div class="modal-backdrop-blur door-backdrop"></div>
+    <div class="door-gateway-card">
+      
+      <button class="modal-close-icon door-close-btn" id="door-modal-close-btn" aria-label="Close Anywhere Door">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Dimensional Cyber Banner -->
+      <div class="door-header-bar">
+        <span class="door-cyber-badge">✦ DIMENSIONAL GATEWAY • SECRET PASSCODE ✦</span>
+        <h2 class="door-modal-heading" id="door-modal-title">Anywhere Door Portal</h2>
+      </div>
+
+      <div class="door-modal-main-content">
+        <!-- 3D Anywhere Door Visual Stage -->
+        <div class="door-3d-stage-container">
+          <div class="door-3d-scene" id="door-3d-scene">
+            
+            <!-- Outer Frame (Iconic Dokodemo Pink/Magenta) -->
+            <div class="door-outer-frame">
+              <div class="door-frame-corner corner-tl"></div>
+              <div class="door-frame-corner corner-tr"></div>
+              <div class="door-frame-corner corner-bl"></div>
+              <div class="door-frame-corner corner-br"></div>
+
+              <!-- Dimensional Cosmic Vortex Behind Door -->
+              <div class="door-portal-vortex">
+                <div class="vortex-cosmic-bg"></div>
+                <div class="vortex-spinning-ring"></div>
+                <div class="vortex-core-beam"></div>
+                <div class="vortex-stars-layer"></div>
+                <div class="vortex-realm-label">
+                  <i class="fa-solid fa-crown"></i>
+                  <span>ADMIN REALM</span>
+                </div>
+              </div>
+
+              <!-- 3D Swinging Door Leaf Panel -->
+              <div class="door-leaf-panel" id="door-leaf-panel">
+                <div class="door-panel-front">
+                  <div class="door-wood-bevel bevel-top"></div>
+                  <div class="door-wood-bevel bevel-bottom"></div>
+                  
+                  <!-- Golden Door Hardware -->
+                  <div class="door-knob-hardware" id="door-knob-hardware">
+                    <div class="door-knob-plate"></div>
+                    <div class="door-knob-handle">
+                      <div class="handle-stem"></div>
+                      <div class="handle-lever"></div>
+                    </div>
+                    <div class="door-keyhole"></div>
+                  </div>
+
+                  <!-- Door Emblem -->
+                  <div class="door-magic-crest">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Secret Passcode Entry Box -->
+        <div class="door-passcode-console" id="door-passcode-console">
+          <div class="door-console-top">
+            <div class="door-key-badge">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <div>
+              <h3 class="door-console-title">Speak The Passphrase</h3>
+              <p class="door-console-sub">
+                Whisper the magic code to swing open the <strong>Anywhere Door</strong> and access Admin clearance.
+              </p>
+            </div>
+          </div>
+
+          <form id="form-door-secret" class="door-input-form">
+            <div class="door-input-wrap">
+              <span class="door-input-prefix">CODE:</span>
+              <input 
+                type="password" 
+                id="door-secret-input" 
+                class="door-secret-input" 
+                placeholder="Enter secret passphrase..." 
+                autocomplete="off" 
+                spellcheck="false"
+                required 
+              />
+            </div>
+            <button type="submit" class="btn-unlock-door" id="btn-unlock-door">
+              <i class="fa-solid fa-door-open"></i>
+              <span>Open Door</span>
+            </button>
+          </form>
+
+          <div class="door-status-feedback" id="door-status-feedback">
+            <i class="fa-solid fa-lock" id="door-status-icon"></i>
+            <span id="door-status-text">Authorized Access Only • Secret Passphrase Required</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- ================= MODAL: 3D BUILDER REALM (SECRET EASTER EGG) ================= -->
+  <dialog id="builder-realm-modal" class="builder-realm-modal" aria-labelledby="builder-realm-title">
+    <div class="modal-backdrop-blur builder-realm-backdrop"></div>
+    <div class="builder-realm-card" id="builder-realm-card">
+      
+      <!-- Modal Close Button -->
+      <button class="modal-close-icon builder-close-btn" id="builder-realm-close-btn" aria-label="Exit Builder Realm">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Clean Header Banner -->
+      <div class="builder-header-banner">
+        <div class="builder-badge-group">
+          <span class="builder-cyber-pill"><i class="fa-solid fa-crown"></i> SYSTEM ARCHITECT</span>
+          <span class="builder-status-pill"><i class="fa-solid fa-certificate"></i> VERIFIED ORIGINAL BUILDER</span>
+        </div>
+        <h2 class="builder-realm-title" id="builder-realm-title">The Builder Realm</h2>
+        <p class="builder-realm-subtitle">Original Creator & System Provenance</p>
+      </div>
+
+      <!-- Main Creator Card Body -->
+      <div class="builder-simple-body">
+        
+        <!-- Avatar Section -->
+        <div class="builder-avatar-wrap">
+          <div class="builder-avatar-ring"></div>
+          <img src="Minimalist Lavender Circle Portrait.png" alt="Md. Eftakhar Amin Sakib" class="builder-avatar-img" id="builder-avatar-photo" />
+          <div class="builder-avatar-badge" title="Verified Creator">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+        </div>
+
+        <!-- Identity Details -->
+        <div class="builder-identity-block">
+          <h3 class="builder-name">MD. EFTAKHAR AMIN SAKIB</h3>
+          <div class="builder-role-tag">
+            <i class="fa-solid fa-code"></i>
+            <span>Full-Stack Developer & Creative Engineer</span>
+          </div>
+          <p class="builder-bio-text">
+            The original visionary, system architect, and creative engineer who designed and coded this entire neo-brutalist portfolio engine from scratch.
+          </p>
+        </div>
+
+        <!-- Provenance Watermark Notice -->
+        <div class="builder-provenance-card">
+          <div class="provenance-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="provenance-info">
+            <strong>IMMUTABLE PROVENANCE SEAL:</strong> If this portfolio template has been forked, cloned, or repurposed by another developer, this secret dimension preserves permanent credit for the original architect, <strong>Md. Eftakhar Amin Sakib</strong>.
+          </div>
+        </div>
+
+        <!-- Direct Social & Creator Connect Links -->
+        <div class="builder-actions-grid">
+          <a href="https://www.linkedin.com/in/md-eftakhar-amin-sakib" target="_blank" rel="noopener noreferrer" class="builder-link-btn btn-linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn Profile</span>
+            <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+          </a>
+
+          <a href="https://github.com/EFTAKHAR-AMIN-SAKIB" target="_blank" rel="noopener noreferrer" class="builder-link-btn btn-github">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub Profile</span>
+            <i class="fa-solid fa-arrow-up-right-from-square mini-arrow"></i>
+          </a>
+
+          <button type="button" class="builder-link-btn btn-copy-credit" id="btn-copy-builder-credit">
+            <i class="fa-solid fa-copy"></i>
+            <span>Copy Creator Credit</span>
+          </button>
+        </div>
+
+        <!-- Return / Exit Button -->
+        <button type="button" class="btn-return-dimension" id="btn-return-dimension">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Return to Portfolio</span>
+        </button>
+
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- ================= MODAL 2: ADMIN LOGIN ================= -->
+  <dialog id="admin-login-modal" class="admin-modal" aria-labelledby="login-modal-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-content-card admin-login-card">
+      
+      <button class="modal-close-icon" id="login-modal-close-btn" aria-label="Close login dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header-banner">
+        <div class="modal-banner-badge">🔐 Firebase Auth</div>
+        <h2 class="modal-title" id="login-modal-title">Portfolio Admin Portal</h2>
+      </div>
+
+      <form id="admin-login-form" class="modal-scrollable-body">
+        <p class="modal-summary">
+          Sign in with your <strong>Firebase Admin Credentials</strong> to open the full Portfolio Content Manager.
+        </p>
+
+        <div class="form-group">
+          <label for="admin-email-input" class="form-label">Admin Email</label>
+          <input 
+            type="email" 
+            id="admin-email-input" 
+            class="form-input" 
+            placeholder="admin@yourdomain.com" 
+            required 
+            autocomplete="username"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="admin-passcode-input" class="form-label">Admin Password</label>
+          <input 
+            type="password" 
+            id="admin-passcode-input" 
+            class="form-input" 
+            placeholder="Enter admin password..." 
+            required 
+            autocomplete="current-password"
+          />
+        </div>
+
+        <div class="modal-actions-row">
+          <button type="submit" class="btn-primary" id="btn-submit-login">
+            <i class="fa-solid fa-unlock"></i>
+            <span>Sign In with Firebase Auth</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </dialog>
+
+  <!-- ================= MODAL 3: PRO ADMIN CMS DASHBOARD ================= -->
+  <dialog id="admin-cms-modal" class="admin-modal" aria-labelledby="cms-modal-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-content-card">
+      
+      <button class="modal-close-icon" id="cms-modal-close-btn" aria-label="Close CMS">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header-banner">
+        <div class="modal-banner-badge">👑 Portfolio Command Center</div>
+        <h2 class="modal-title" id="cms-modal-title">Portfolio Content Manager</h2>
+      </div>
+
+      <div class="modal-scrollable-body">
+        
+        <!-- Tab Navigation Bar -->
+        <div class="cms-nav-tabs">
+          <button class="cms-tab-btn active" data-tab="tab-profile">
+            <i class="fa-solid fa-user-pen"></i>
+            <span>Identity & Hero</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-stats">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Metric Stats</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-projects" id="cms-tab-btn-projects">
+            <i class="fa-solid fa-cubes"></i>
+            <span>Projects (<span id="tab-count-proj">0</span>)</span>
+            <span class="tab-off-pill" id="tab-off-projects" style="display:none;">OFF</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-media" id="cms-tab-btn-media">
+            <i class="fa-solid fa-photo-film"></i>
+            <span>Media & Design (<span id="tab-count-med">0</span>)</span>
+            <span class="tab-off-pill" id="tab-off-media" style="display:none;">OFF</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-achievements" id="cms-tab-btn-achievements">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Achievements (<span id="tab-count-ach">0</span>)</span>
+            <span class="tab-off-pill" id="tab-off-achievements" style="display:none;">OFF</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-socials" id="cms-tab-btn-socials">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Socials (<span id="tab-count-soc">0</span>)</span>
+            <span class="tab-off-pill" id="tab-off-socials" style="display:none;">OFF</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-r2storage">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>R2 Storage</span>
+          </button>
+          <button class="cms-tab-btn" data-tab="tab-backup">
+            <i class="fa-solid fa-sliders"></i>
+            <span>Backup & Settings</span>
+          </button>
+        </div>
+
+        <!-- ================= TAB 1: IDENTITY & HERO ================= -->
+        <div class="cms-tab-content active" id="tab-profile">
+          <form id="form-edit-profile" class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-id-card"></i> Personal Identity & Branding</h3>
+            
+            <!-- Profile Picture / Avatar Editor Widget -->
+            <div class="form-group cms-avatar-editor-card">
+              <label class="form-label"><i class="fa-solid fa-camera"></i> Profile Picture & Hero Avatar</label>
+              
+              <div class="cms-avatar-edit-layout">
+                <!-- Circular Avatar Preview -->
+                <div class="cms-avatar-preview-wrap">
+                  <img id="edit-avatar-preview-img" src="Minimalist Lavender Circle Portrait.png" alt="Avatar Preview" class="cms-avatar-preview-img" />
+                  <span class="cms-avatar-live-badge" title="Live Profile Avatar"><i class="fa-solid fa-bolt"></i></span>
+                </div>
+
+                <!-- Controls & Upload Options -->
+                <div class="cms-avatar-controls-col">
+                  <div class="cms-avatar-btn-row">
+                    <input type="file" id="avatar-file-upload-input" style="display:none;" accept="image/*" />
+                    <button type="button" class="btn-secondary btn-avatar-upload" id="btn-trigger-avatar-upload">
+                      <i class="fa-solid fa-cloud-arrow-up"></i>
+                      <span>Upload New Picture</span>
+                    </button>
+                    <button type="button" class="btn-icon-del btn-avatar-reset" id="btn-reset-avatar-default" title="Reset to default portrait">
+                      <i class="fa-solid fa-rotate-left"></i>
+                      <span>Default</span>
+                    </button>
+                  </div>
+
+                  <!-- Real-Time Upload Progress Tracker -->
+                  <div class="cms-upload-progress-wrap" id="avatar-upload-progress-wrap" style="display:none;">
+                    <div class="cms-upload-progress-header">
+                      <span class="progress-status-text" id="avatar-progress-status-text">
+                        <i class="fa-solid fa-spinner fa-spin"></i> Uploading: <strong id="avatar-progress-percentage">0%</strong>
+                      </span>
+                      <span class="progress-bytes-text" id="avatar-progress-bytes">0 KB / 0 KB</span>
+                    </div>
+                    <div class="cms-upload-progress-bar-track">
+                      <div class="cms-upload-progress-bar-fill" id="avatar-progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="cms-avatar-url-input-wrap">
+                    <input type="text" id="edit-avatar-url" class="form-input" placeholder="Or paste image URL (e.g. https://... or /portrait.png)" />
+                  </div>
+                  <span class="upload-status-hint" id="avatar-upload-status-hint">Uploads directly to Cloudflare R2 CDN or accepts external image URLs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Name Line 1 (Top Line)</label>
+                <input type="text" id="edit-name-line1" class="form-input" placeholder="e.g. MD. EFTAKHAR" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Name Line 2 (Second Line Left)</label>
+                <input type="text" id="edit-name-line2" class="form-input" placeholder="e.g. AMIN" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Name Highlight (Second Line Accent Box)</label>
+                <input type="text" id="edit-name-line3" class="form-input" placeholder="e.g. SAKIB" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Professional Role / Title</label>
+                <input type="text" id="edit-role-title" class="form-input" placeholder="e.g. Full-Stack Developer & Creative Engineer" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Bio Description</label>
+              <textarea id="edit-bio" class="form-textarea" placeholder="Describe your expertise, tech focus, and what you build..." required></textarea>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Availability Status Text</label>
+                <input type="text" id="edit-status" class="form-input" placeholder="e.g. Available for Opportunities" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Resume / CV Link</label>
+                <input type="text" id="edit-resume-url" class="form-input" placeholder="https://drive.google.com/... or /resume.pdf" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Buy Me a Coffee / Support Link</label>
+              <input type="text" id="edit-coffee-url" class="form-input" placeholder="https://buymeacoffee.com/sakib or https://ko-fi.com/..." />
+            </div>
+
+            <div class="cms-toolbar-row">
+              <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>Save Identity Changes</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= TAB 2: METRIC STATS ================= -->
+        <div class="cms-tab-content" id="tab-stats">
+          <form id="form-edit-stats" class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-chart-line"></i> Metric Stats Chips (Under Bio)</h3>
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Stat 1 (Yellow Chip)</label>
+                <input type="text" id="edit-stat-1" class="form-input" placeholder="4+ Years Exp" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Stat 2 (Cyan Chip)</label>
+                <input type="text" id="edit-stat-2" class="form-input" placeholder="24+ Projects Built" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Stat 3 (Coral Chip)</label>
+                <input type="text" id="edit-stat-3" class="form-input" placeholder="100% Satisfaction" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Stat 4 (Lavender Chip)</label>
+                <input type="text" id="edit-stat-4" class="form-input" placeholder="4 Tech Honors" required />
+              </div>
+            </div>
+
+            <div class="cms-toolbar-row">
+              <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>Save Stats Changes</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= TAB 3: PROJECTS CRUD ================= -->
+        <div class="cms-tab-content" id="tab-projects">
+          <!-- Quick Feature Visibility Banner -->
+          <div class="tab-feature-visibility-banner" id="banner-visibility-projects">
+            <div class="tab-feat-vis-left">
+              <span class="tab-feat-vis-icon" style="background: var(--color-primary); color: #FFFFFF;"><i class="fa-solid fa-layer-group"></i></span>
+              <div>
+                <span class="tab-feat-vis-label">Website Visibility Status:</span>
+                <span class="tab-feat-vis-status is-visible" id="tab-vis-status-projects">LIVE & VISIBLE 👁️</span>
+              </div>
+            </div>
+            <button type="button" class="btn-feature-quick-toggle" data-toggle-feature="projects" id="btn-tab-toggle-projects" title="Toggle Featured Projects visibility on public website">
+              <i class="fa-solid fa-eye-slash"></i>
+              <span>Hide from Website</span>
+            </button>
+          </div>
+
+          <div class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-list-check"></i> Current Projects (<span id="cms-proj-count-label">0</span>)</h3>
+            <div class="cms-items-list" id="cms-projects-list">
+              <!-- Dynamic Project Rows -->
+            </div>
+          </div>
+
+          <form id="form-edit-project" class="cms-section-card">
+            <h3 class="cms-section-title" id="project-form-heading"><i class="fa-solid fa-circle-plus"></i> Add New Project</h3>
+            <input type="hidden" id="project-edit-id" value="" />
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Project Title</label>
+                <input type="text" id="proj-title" class="form-input" placeholder="e.g. Nova AI Neural Workspace" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Category</label>
+                <input type="text" id="proj-category" class="form-input" placeholder="e.g. FULL-STACK • AI" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Badge Tag (Top Right of Banner)</label>
+                <input type="text" id="proj-chain" class="form-input" placeholder="e.g. FEATURED, SAAS, MOBILE" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Status / Metric Chip</label>
+                <input type="text" id="proj-value" class="form-input" placeholder="e.g. 50k+ USERS, LIVE DEMO" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Short Description</label>
+              <textarea id="proj-desc" class="form-textarea" placeholder="A concise summary of what this project accomplishes..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Tech Stack (comma separated)</label>
+              <input type="text" id="proj-techs" class="form-input" placeholder="Next.js 15, TypeScript, PostgreSQL, Tailwind CSS" required />
+            </div>
+
+            <!-- Direct Cloudflare R2 Project Media Uploader & Live Preview -->
+            <div class="form-group cms-media-uploader-card">
+              <label class="form-label"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Project Media Asset to Cloudflare R2 (Screenshot / Demo Video)</label>
+              <div class="cms-inline-upload-box" id="proj-cms-dropzone">
+                <input type="file" id="proj-file-upload-input" style="display:none;" accept="image/*,video/mp4,video/webm" />
+                <button type="button" class="btn-secondary" id="btn-trigger-proj-upload">
+                  <i class="fa-solid fa-folder-open"></i>
+                  <span>Upload Cover / Video to Cloudflare R2</span>
+                </button>
+                <span class="upload-status-hint" id="proj-upload-status-hint">Direct CDN upload to bucket: portfolio-media</span>
+              </div>
+
+              <!-- Real-Time Upload Progress Tracker -->
+              <div class="cms-upload-progress-wrap" id="proj-upload-progress-wrap" style="display:none;">
+                <div class="cms-upload-progress-header">
+                  <span class="progress-status-text" id="proj-progress-status-text">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Uploading: <strong id="proj-progress-percentage">0%</strong>
+                  </span>
+                  <span class="progress-bytes-text" id="proj-progress-bytes">0 KB / 0 KB</span>
+                </div>
+                <div class="cms-upload-progress-bar-track">
+                  <div class="cms-upload-progress-bar-fill" id="proj-progress-bar-fill" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <!-- Instant Preview Box -->
+              <div class="media-live-thumbnail-preview" id="proj-thumbnail-preview-box" style="display:none;">
+                <div class="media-preview-inner">
+                  <img id="proj-preview-img" src="" alt="Project Cover Preview" style="display:none;" />
+                  <video id="proj-preview-video" controls playsinline style="display:none;"></video>
+                </div>
+                <div class="media-preview-actions">
+                  <span class="media-preview-url-text" id="proj-preview-url-text"></span>
+                  <button type="button" class="btn-icon-del" id="btn-remove-proj-preview" title="Remove Asset"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-photo-film"></i> Primary Media Asset CDN URL (Image or Video)</label>
+                <input type="url" id="proj-asset-url" class="form-input" placeholder="https://pub-50fe94eff2494bc0945ba23feb179bed.r2.dev/..." />
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-play"></i> Optional Video Demo Link (YouTube, Shorts, or Vimeo)</label>
+                <input type="url" id="proj-video-url" class="form-input" placeholder="https://youtube.com/shorts/... or https://youtube.com/watch?..." />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-globe"></i> Live Website / App URL</label>
+                <input type="url" id="proj-live" class="form-input" placeholder="https://your-live-website.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label"><i class="fa-brands fa-github"></i> GitHub Code Repository URL</label>
+                <input type="url" id="proj-github" class="form-input" placeholder="https://github.com/your-username/repo" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Key Highlights for Detail Modal (1 bullet per line)</label>
+              <textarea id="proj-features" class="form-textarea" placeholder="Architected scalable microservices with 99.9% uptime&#10;Integrated real-time WebSockets and streaming responses&#10;Optimized performance achieving 100 Lighthouse score"></textarea>
+            </div>
+
+            <div class="cms-toolbar-row">
+              <button type="submit" class="btn-primary" id="btn-save-project">
+                <i class="fa-solid fa-plus"></i>
+                <span>Save Project</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-cancel-project-edit">
+                <span>Reset Form</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= TAB 4: MEDIA & DESIGN CRUD (2 SUB-OPTIONS: MEDIA & DESIGN) ================= -->
+        <div class="cms-tab-content" id="tab-media">
+          <!-- Quick Feature Visibility Banner -->
+          <div class="tab-feature-visibility-banner" id="banner-visibility-media">
+            <div class="tab-feat-vis-left">
+              <span class="tab-feat-vis-icon" style="background: var(--color-primary); color: #FFFFFF;"><i class="fa-solid fa-clapperboard"></i></span>
+              <div>
+                <span class="tab-feat-vis-label">Website Visibility Status:</span>
+                <span class="tab-feat-vis-status is-visible" id="tab-vis-status-media">LIVE & VISIBLE 👁️</span>
+              </div>
+            </div>
+            <button type="button" class="btn-feature-quick-toggle" data-toggle-feature="media" id="btn-tab-toggle-media" title="Toggle Media & Design Studio visibility on public website">
+              <i class="fa-solid fa-eye-slash"></i>
+              <span>Hide from Website</span>
+            </button>
+          </div>
+
+          <div class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-photo-film"></i> Current Creative Works (<span id="cms-media-count-label">0</span>)</h3>
+            <div class="cms-items-list" id="cms-media-list">
+              <!-- Dynamic Media Rows -->
+            </div>
+          </div>
+
+          <form id="form-edit-media" class="cms-section-card">
+            <h3 class="cms-section-title" id="media-form-heading"><i class="fa-solid fa-circle-plus"></i> Add Creative Work</h3>
+            <input type="hidden" id="media-edit-id" value="" />
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Work Title</label>
+                <input type="text" id="media-title" class="form-input" placeholder="e.g. Cyberpunk Tech Brand Reel" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Creative Channel (2 Options)</label>
+                <select id="media-type" class="form-select">
+                  <option value="video">🎬 Video & Media (Reels, Promos, YouTube)</option>
+                  <option value="design">🎨 Graphics & Design (Banners, Posters, UI/UX)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Category Sub-Label</label>
+                <input type="text" id="media-category" class="form-input" placeholder="e.g. VIDEO EDITING, POSTER ART, BANNER DESIGN" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Format / Tag Badge</label>
+                <input type="text" id="media-chain" class="form-input" placeholder="e.g. 4K REEL, 1080x1920, VECTOR, FIGMA" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Metric / Impact Chip</label>
+                <input type="text" id="media-value" class="form-input" placeholder="e.g. 500K+ VIEWS, CLIENT WORK, SPOTLIGHT" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Tools Used (comma separated)</label>
+                <input type="text" id="media-techs" class="form-input" placeholder="Premiere Pro, DaVinci Resolve, Photoshop, Figma" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Creative Description & Journey</label>
+              <textarea id="media-desc" class="form-textarea" placeholder="Describe the creative direction, color grading, sound design, or visual composition..." required></textarea>
+            </div>
+
+            <!-- Direct Cloudflare R2 Media Asset Uploader & Live Preview -->
+            <div class="form-group cms-media-uploader-card">
+              <label class="form-label"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Media Asset to Cloudflare R2 (Image / MP4 Video)</label>
+              <div class="cms-inline-upload-box" id="media-cms-dropzone">
+                <input type="file" id="media-file-upload-input" style="display:none;" accept="image/*,video/mp4,video/webm" />
+                <button type="button" class="btn-secondary" id="btn-trigger-media-upload">
+                  <i class="fa-solid fa-folder-open"></i>
+                  <span>Upload File to Cloudflare R2</span>
+                </button>
+                <span class="upload-status-hint" id="media-upload-status-hint">Direct CDN upload to bucket: portfolio-media</span>
+              </div>
+
+              <!-- Real-Time Upload Progress Tracker -->
+              <div class="cms-upload-progress-wrap" id="media-upload-progress-wrap" style="display:none;">
+                <div class="cms-upload-progress-header">
+                  <span class="progress-status-text" id="media-progress-status-text">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Uploading: <strong id="media-progress-percentage">0%</strong>
+                  </span>
+                  <span class="progress-bytes-text" id="media-progress-bytes">0 KB / 0 KB</span>
+                </div>
+                <div class="cms-upload-progress-bar-track">
+                  <div class="cms-upload-progress-bar-fill" id="media-progress-bar-fill" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <!-- Instant Preview Box -->
+              <div class="media-live-thumbnail-preview" id="media-thumbnail-preview-box" style="display:none;">
+                <div class="media-preview-inner">
+                  <img id="media-preview-img" src="" alt="Media Preview" style="display:none;" />
+                  <video id="media-preview-video" controls playsinline style="display:none;"></video>
+                </div>
+                <div class="media-preview-actions">
+                  <span class="media-preview-url-text" id="media-preview-url-text"></span>
+                  <button type="button" class="btn-icon-del" id="btn-remove-media-preview" title="Remove Asset"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Asset CDN Image / Video URL</label>
+                <input type="url" id="media-asset-url" class="form-input" placeholder="https://pub-50fe94eff2494bc0945ba23feb179bed.r2.dev/..." />
+              </div>
+              <div class="form-group">
+                <label class="form-label">External Watch / Live Link (YouTube / Behance / Figma)</label>
+                <input type="url" id="media-live" class="form-input" placeholder="https://youtube.com/watch?... or https://behance.net/..." />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Portfolio / Source Link (Behance, Dribbble, GitHub)</label>
+              <input type="url" id="media-github" class="form-input" placeholder="https://behance.net/... or https://dribbble.com/..." />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Creative Highlights (1 bullet per line)</label>
+              <textarea id="media-features" class="form-textarea" placeholder="Dynamic rhythm cuts synchronized to audio transients&#10;Custom color grading and cinematic LUT creation&#10;Designed for high audience retention and engagement"></textarea>
+            </div>
+
+            <div class="cms-toolbar-row">
+              <button type="submit" class="btn-primary" id="btn-save-media">
+                <i class="fa-solid fa-plus"></i>
+                <span>Save Work</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-cancel-media-edit">
+                <span>Reset Form</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= TAB 5: ACHIEVEMENTS CRUD ================= -->
+        <div class="cms-tab-content" id="tab-achievements">
+          <!-- Quick Feature Visibility Banner -->
+          <div class="tab-feature-visibility-banner" id="banner-visibility-achievements">
+            <div class="tab-feat-vis-left">
+              <span class="tab-feat-vis-icon" style="background: var(--color-personal); color: #FFFFFF;"><i class="fa-solid fa-trophy"></i></span>
+              <div>
+                <span class="tab-feat-vis-label">Website Visibility Status:</span>
+                <span class="tab-feat-vis-status is-visible" id="tab-vis-status-achievements">LIVE & VISIBLE 👁️</span>
+              </div>
+            </div>
+            <button type="button" class="btn-feature-quick-toggle" data-toggle-feature="achievements" id="btn-tab-toggle-achievements" title="Toggle Achievements visibility on public website">
+              <i class="fa-solid fa-eye-slash"></i>
+              <span>Hide from Website</span>
+            </button>
+          </div>
+
+          <div class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-award"></i> Current Achievements</h3>
+            <div class="cms-items-list" id="cms-achievements-list">
+              <!-- Dynamic Achievement Rows -->
+            </div>
+          </div>
+
+          <form id="form-edit-achievement" class="cms-section-card">
+            <h3 class="cms-section-title" id="ach-form-heading"><i class="fa-solid fa-circle-plus"></i> Add New Achievement</h3>
+            <input type="hidden" id="ach-edit-id" value="" />
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Achievement Title</label>
+                <input type="text" id="ach-title" class="form-input" placeholder="e.g. International Web Innovations Hackathon" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Badge Label</label>
+                <input type="text" id="ach-badge" class="form-input" placeholder="e.g. 1st Place Global, #1 Product" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Year</label>
+                <input type="text" id="ach-year" class="form-input" value="2025" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Theme Color & Icon Box</label>
+                <select id="ach-theme" class="form-select">
+                  <option value="gold">Gold (Trophy)</option>
+                  <option value="purple">Coral / Pink (Star)</option>
+                  <option value="cyan">Cyan (Certificate)</option>
+                  <option value="lavender">Lavender (Keynote / Mic)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <textarea id="ach-desc" class="form-textarea" placeholder="Explain the context, competition size, or recognition..." required></textarea>
+            </div>
+
+            <!-- Direct Cloudflare R2 Certificate / Award Uploader & Live Preview -->
+            <div class="form-group cms-media-uploader-card">
+              <label class="form-label"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Certificate / Award Photo to Cloudflare R2</label>
+              <div class="cms-inline-upload-box" id="ach-cms-dropzone">
+                <input type="file" id="ach-file-upload-input" style="display:none;" accept="image/*" />
+                <button type="button" class="btn-secondary" id="btn-trigger-ach-upload">
+                  <i class="fa-solid fa-folder-open"></i>
+                  <span>Upload Certificate to Cloudflare R2</span>
+                </button>
+                <span class="upload-status-hint" id="ach-upload-status-hint">Direct CDN upload to bucket: portfolio-media</span>
+              </div>
+
+              <!-- Real-Time Upload Progress Tracker -->
+              <div class="cms-upload-progress-wrap" id="ach-upload-progress-wrap" style="display:none;">
+                <div class="cms-upload-progress-header">
+                  <span class="progress-status-text" id="ach-progress-status-text">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Uploading: <strong id="ach-progress-percentage">0%</strong>
+                  </span>
+                  <span class="progress-bytes-text" id="ach-progress-bytes">0 KB / 0 KB</span>
+                </div>
+                <div class="cms-upload-progress-bar-track">
+                  <div class="cms-upload-progress-bar-fill" id="ach-progress-bar-fill" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <!-- Instant Preview Box -->
+              <div class="media-live-thumbnail-preview" id="ach-thumbnail-preview-box" style="display:none;">
+                <div class="media-preview-inner">
+                  <img id="ach-preview-img" src="" alt="Certificate Preview" style="display:none;" />
+                </div>
+                <div class="media-preview-actions">
+                  <span class="media-preview-url-text" id="ach-preview-url-text"></span>
+                  <button type="button" class="btn-icon-del" id="btn-remove-ach-preview" title="Remove Asset"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Certificate / Trophy CDN Image URL</label>
+                <input type="url" id="ach-asset-url" class="form-input" placeholder="https://pub-50fe94eff2494bc0945ba23feb179bed.r2.dev/..." />
+              </div>
+              <div class="form-group">
+                <label class="form-label">External Verification / Credential URL</label>
+                <input type="url" id="ach-verify-url" class="form-input" placeholder="https://credly.com/... or https://producthunt.com/..." />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Metric / Impact Pill</label>
+              <input type="text" id="ach-metric" class="form-input" placeholder="e.g. Outperformed 240+ Submissions" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Honor Highlights (1 bullet per line)</label>
+              <textarea id="ach-features" class="form-textarea" placeholder="Awarded top international prize among 800+ engineers&#10;Recognized for innovation in high-speed UI architectures&#10;Verified credential and official certificate of excellence"></textarea>
+            </div>
+
+            <div class="cms-toolbar-row">
+              <button type="submit" class="btn-primary" id="btn-save-achievement">
+                <i class="fa-solid fa-plus"></i>
+                <span>Save Achievement</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-cancel-ach-edit">
+                <span>Reset Form</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= TAB 6: SOCIAL LINKS CRUD ================= -->
+        <div class="cms-tab-content" id="tab-socials">
+          <!-- Quick Feature Visibility Banner -->
+          <div class="tab-feature-visibility-banner" id="banner-visibility-socials">
+            <div class="tab-feat-vis-left">
+              <span class="tab-feat-vis-icon" style="background: var(--color-social); color: var(--color-ink);"><i class="fa-solid fa-paper-plane"></i></span>
+              <div>
+                <span class="tab-feat-vis-label">Website Visibility Status:</span>
+                <span class="tab-feat-vis-status is-visible" id="tab-vis-status-socials">LIVE & VISIBLE 👁️</span>
+              </div>
+            </div>
+            <button type="button" class="btn-feature-quick-toggle" data-toggle-feature="socials" id="btn-tab-toggle-socials" title="Toggle Connect & Socials visibility on public website">
+              <i class="fa-solid fa-eye-slash"></i>
+              <span>Hide from Website</span>
+            </button>
+          </div>
+
+          <div class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-share-nodes"></i> Current Social & Contact Channels</h3>
+            <div class="cms-items-list" id="cms-socials-list">
+              <!-- Dynamic Social Rows -->
+            </div>
+          </div>
+
+          <form id="form-edit-social" class="cms-section-card">
+            <h3 class="cms-section-title" id="soc-form-heading"><i class="fa-solid fa-circle-plus"></i> Add New Contact Channel</h3>
+            <input type="hidden" id="soc-edit-id" value="" />
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Channel Title</label>
+                <input type="text" id="soc-title" class="form-input" placeholder="e.g. hello@domain.com or GitHub Profile" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Category Label</label>
+                <input type="text" id="soc-label" class="form-input" placeholder="e.g. Direct Inbox, Open Source, Network" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Channel Type</label>
+                <select id="soc-type" class="form-select">
+                  <option value="email">Direct Email (1-Click Clipboard Copy)</option>
+                  <option value="link">External Web Link</option>
+                  <option value="schedule">Schedule / Calendly Meeting</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Icon</label>
+                <select id="soc-icon" class="form-select">
+                  <option value="fa-solid fa-envelope">Envelope (Email)</option>
+                  <option value="fa-brands fa-github">GitHub</option>
+                  <option value="fa-brands fa-linkedin-in">LinkedIn</option>
+                  <option value="fa-brands fa-x-twitter">X / Twitter</option>
+                  <option value="fa-regular fa-calendar-check">Calendar (Schedule)</option>
+                  <option value="fa-brands fa-whatsapp">WhatsApp</option>
+                  <option value="fa-solid fa-link">Generic Link</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Target URL or Email Address</label>
+              <input type="text" id="soc-url" class="form-input" placeholder="https://... or hello@domain.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <textarea id="soc-desc" class="form-textarea" placeholder="Brief note about this channel..." required></textarea>
+            </div>
+
+            <div class="cms-toolbar-row">
+              <button type="submit" class="btn-primary">
+                <i class="fa-solid fa-plus"></i>
+                <span>Save Channel</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-cancel-soc-edit">
+                <span>Reset Form</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ================= TAB 8: CLOUDFLARE R2 OBJECT STORAGE ================= -->
+        <div class="cms-tab-content" id="tab-r2storage">
+          <div class="cms-section-card" style="border-color: var(--pop-cyan);">
+            <div class="cms-card-header-row">
+              <h3 class="cms-section-title"><i class="fa-solid fa-cloud-arrow-up"></i> Cloudflare R2 Media & File Uploader</h3>
+              <span class="status-indicator-badge connected" id="r2-status-badge"><i class="fa-solid fa-circle-check"></i> R2 Bucket Connected</span>
+            </div>
+            <p class="modal-summary">
+              Directly upload images, project banners, video thumbnails, or resume documents to your Cloudflare R2 bucket <code>portfolio-media</code> with global CDN delivery.
+            </p>
+
+            <div class="r2-upload-dropzone" id="r2-dropzone">
+              <input type="file" id="r2-file-input" style="display: none;" accept="image/*,video/mp4,application/pdf" />
+              <div class="r2-dropzone-content" id="r2-dropzone-content">
+                <i class="fa-solid fa-cloud-arrow-up r2-upload-icon"></i>
+                <h4 class="r2-dropzone-title">Click to Browse or Drag & Drop File Here</h4>
+                <p class="r2-dropzone-sub">Supports Images (PNG, JPG, WebP, SVG, GIF), Videos (MP4), PDFs (Max 50MB)</p>
+                <button type="button" class="btn-primary" id="btn-trigger-r2-browse" style="margin-top: 0.75rem; padding: 0.45rem 1rem;">
+                  <i class="fa-solid fa-folder-open"></i>
+                  <span>Browse Local File</span>
+                </button>
+              </div>
+              <div class="r2-upload-progress-box" id="r2-progress-box" style="display: none;">
+                <div class="cms-upload-progress-header" style="margin-bottom: 0.65rem;">
+                  <span class="r2-progress-text" id="r2-progress-text"><i class="fa-solid fa-spinner fa-spin"></i> Uploading: <strong id="r2-progress-percentage" style="color:var(--pop-coral);">0%</strong></span>
+                  <span class="progress-bytes-text" id="r2-progress-bytes">0 KB / 0 KB</span>
+                </div>
+                <div class="cms-upload-progress-bar-track">
+                  <div class="cms-upload-progress-bar-fill" id="r2-progress-bar-fill" style="width: 0%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upload Result Box -->
+            <div class="r2-result-box" id="r2-result-box" style="display: none;">
+              <h4 class="r2-result-title"><i class="fa-solid fa-circle-check"></i> Upload Successful! Live Public CDN URL:</h4>
+              <div class="r2-url-input-row">
+                <input type="text" id="r2-uploaded-url-input" class="form-input" readonly />
+                <button type="button" class="btn-secondary" id="btn-copy-r2-url">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy URL</span>
+                </button>
+              </div>
+
+              <div class="r2-quick-assign-row">
+                <span class="quick-assign-label">Quick 1-Click Assignment:</span>
+                <button type="button" class="btn-secondary btn-sm" id="btn-assign-avatar" title="Set as Hero Avatar Image">
+                  <i class="fa-solid fa-user-astronaut"></i> Set Hero Avatar
+                </button>
+                <button type="button" class="btn-secondary btn-sm" id="btn-assign-resume" title="Set as Resume Download URL">
+                  <i class="fa-solid fa-file-pdf"></i> Set Resume Link
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recently Uploaded Files Card -->
+          <div class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-clock-rotate-left"></i> Session Upload History</h3>
+            <div class="cms-items-list" id="r2-history-list">
+              <p class="empty-state-text" id="r2-empty-text" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-secondary); padding: 0.5rem 0;">No files uploaded yet in this session.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 7: BACKUP & SETTINGS ================= -->
+        <div class="cms-tab-content" id="tab-backup">
+          
+          <!-- Master Portfolio Feature Visibility & Section Toggles Card -->
+          <div class="cms-section-card" id="cms-feature-visibility-card" style="border-color: var(--pop-yellow);">
+            <div class="cms-card-header-row">
+              <h3 class="cms-section-title"><i class="fa-solid fa-toggle-on"></i> Feature & Section Visibility Toggles</h3>
+              <span class="status-indicator-badge connected" id="feature-visibility-badge"><i class="fa-solid fa-bolt"></i> Instant Real-Time</span>
+            </div>
+            <p class="modal-summary">
+              Control which sections are active and visible on your public portfolio. When you toggle a feature off, it instantly disappears from your website. You can re-enable it anytime from here.
+            </p>
+
+            <div class="feature-toggles-grid">
+              
+              <!-- 1. Featured Projects Toggle -->
+              <div class="feature-toggle-item" id="toggle-item-projects">
+                <div class="feature-toggle-left">
+                  <div class="feature-toggle-icon" style="background: var(--color-primary); color: #FFFFFF;">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </div>
+                  <div class="feature-toggle-details">
+                    <div class="feature-toggle-header">
+                      <span class="feature-toggle-name">Featured Projects</span>
+                      <span class="feature-status-chip is-visible" id="chip-status-projects">VISIBLE 👁️</span>
+                    </div>
+                    <p class="feature-toggle-desc">Web applications, systems, interactive builds, and code demo cards.</p>
+                  </div>
+                </div>
+                <div class="feature-toggle-right">
+                  <label class="switch-neo-toggle" for="toggle-feat-projects">
+                    <input type="checkbox" id="toggle-feat-projects" checked>
+                    <span class="neo-slider"></span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 2. Achievements & Milestones Toggle -->
+              <div class="feature-toggle-item" id="toggle-item-achievements">
+                <div class="feature-toggle-left">
+                  <div class="feature-toggle-icon" style="background: var(--color-personal); color: #FFFFFF;">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                  <div class="feature-toggle-details">
+                    <div class="feature-toggle-header">
+                      <span class="feature-toggle-name">Achievements</span>
+                      <span class="feature-status-chip is-visible" id="chip-status-achievements">VISIBLE 👁️</span>
+                    </div>
+                    <p class="feature-toggle-desc">Hackathon wins, honors, verified certificates, and career milestones.</p>
+                  </div>
+                </div>
+                <div class="feature-toggle-right">
+                  <label class="switch-neo-toggle" for="toggle-feat-achievements">
+                    <input type="checkbox" id="toggle-feat-achievements" checked>
+                    <span class="neo-slider"></span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 3. Connect & Socials Toggle -->
+              <div class="feature-toggle-item" id="toggle-item-socials">
+                <div class="feature-toggle-left">
+                  <div class="feature-toggle-icon" style="background: var(--color-social); color: var(--color-ink);">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <div class="feature-toggle-details">
+                    <div class="feature-toggle-header">
+                      <span class="feature-toggle-name">Connect & Socials</span>
+                      <span class="feature-status-chip is-visible" id="chip-status-socials">VISIBLE 👁️</span>
+                    </div>
+                    <p class="feature-toggle-desc">Email 1-click copy, GitHub, LinkedIn, Twitter, and meeting calendar.</p>
+                  </div>
+                </div>
+                <div class="feature-toggle-right">
+                  <label class="switch-neo-toggle" for="toggle-feat-socials">
+                    <input type="checkbox" id="toggle-feat-socials" checked>
+                    <span class="neo-slider"></span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 4. Media & Design Studio Toggle -->
+              <div class="feature-toggle-item" id="toggle-item-media">
+                <div class="feature-toggle-left">
+                  <div class="feature-toggle-icon" style="background: var(--color-primary); color: #FFFFFF;">
+                    <i class="fa-solid fa-clapperboard"></i>
+                  </div>
+                  <div class="feature-toggle-details">
+                    <div class="feature-toggle-header">
+                      <span class="feature-toggle-name">Media & Design Studio</span>
+                      <span class="feature-status-chip is-visible" id="chip-status-media">VISIBLE 👁️</span>
+                    </div>
+                    <p class="feature-toggle-desc">Video edits, commercial reels, posters, banners, and UI/UX visuals.</p>
+                  </div>
+                </div>
+                <div class="feature-toggle-right">
+                  <label class="switch-neo-toggle" for="toggle-feat-media">
+                    <input type="checkbox" id="toggle-feat-media" checked>
+                    <span class="neo-slider"></span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="cms-toolbar-row" style="margin-top: 1rem;">
+              <button type="button" class="btn-primary" id="btn-quick-enable-all">
+                <i class="fa-solid fa-eye"></i>
+                <span>Enable All 4 Features</span>
+              </button>
+              <span class="visibility-sync-hint">
+                <i class="fa-solid fa-arrows-rotate"></i> Saves and syncs automatically
+              </span>
+            </div>
+          </div>
+
+          <!-- Live Visitor Counter Visibility & Controls Card -->
+          <div class="cms-section-card" id="cms-visitor-settings-card">
+            <div class="cms-card-header-row">
+              <h3 class="cms-section-title"><i class="fa-solid fa-eye"></i> Total Visitor Counter & Visibility</h3>
+              <span class="status-indicator-badge" id="cms-backend-mode-badge">⚡ Standalone Mode</span>
+            </div>
+            <p class="modal-summary">
+              Control whether the total visitor counter is publicly visible to everyone or hidden and visible only to you (Admin).
+            </p>
+
+            <div class="visitor-toggle-box">
+              <div class="toggle-control-group">
+                <label class="switch-neo-toggle" for="toggle-visitor-public">
+                  <input type="checkbox" id="toggle-visitor-public" checked>
+                  <span class="neo-slider"></span>
+                </label>
+                <div class="toggle-labels-wrap">
+                  <span class="toggle-title" id="visitor-toggle-status-title">Public Visibility: ENABLED 👁️</span>
+                  <span class="toggle-subtitle" id="visitor-toggle-status-desc">Everyone who visits your portfolio can see the live visitor counter.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-top: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Live Recorded Count</label>
+                <div class="live-count-readout-row">
+                  <span class="live-count-digit" id="cms-live-visitor-count">1</span>
+                  <button type="button" class="btn-secondary btn-sm" id="btn-refresh-visitor-count">
+                    <i class="fa-solid fa-arrows-rotate"></i> Sync
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Custom Base Offset (+ visitors)</label>
+                <input type="number" id="visitor-base-offset-input" class="form-input" min="0" placeholder="0 (Default)" />
+              </div>
+            </div>
+
+            <div class="cms-toolbar-row" style="margin-top: 1rem;">
+              <button type="button" class="btn-primary" id="btn-save-visitor-settings">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>Save Counter Settings</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-test-visitor-hit">
+                <i class="fa-solid fa-plus"></i>
+                <span>Simulate 1 Visit</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Optional Firebase Cloud Backend Setup Card -->
+          <div class="cms-section-card" id="cms-firebase-card" style="border-color: var(--pop-cyan);">
+            <div class="cms-card-header-row">
+              <h3 class="cms-section-title" style="color: var(--ink-black);"><i class="fa-solid fa-cloud"></i> Cloud Backend Sync (Firebase Firestore)</h3>
+              <span class="status-indicator-badge" id="firebase-conn-status">Optional</span>
+            </div>
+            <p class="modal-summary">
+              Connecting Firebase gives you a <strong>real-time cloud database (100% free)</strong>. It persists counts across all worldwide visitors, updates live in real-time, and lets you hide/show the counter globally across all visitors' browsers.
+            </p>
+
+            <div class="form-group" style="margin-top: 0.75rem;">
+              <label class="form-label">Firebase Config JSON (Paste from Firebase Console)</label>
+              <textarea id="firebase-config-input" class="form-textarea" placeholder='Paste your Firebase config object here:&#10;{ "apiKey": "...", "authDomain": "...", "projectId": "...", "appId": "..." }' style="font-family: var(--font-mono); font-size: 0.76rem; min-height: 80px;"></textarea>
+            </div>
+
+            <div class="modal-actions-row" style="border: none; padding: 0;">
+              <button type="button" class="btn-primary" id="btn-connect-firebase">
+                <i class="fa-solid fa-link"></i>
+                <span>Connect / Update Firebase</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-disconnect-firebase">
+                <i class="fa-solid fa-link-slash"></i>
+                <span>Use Standalone Mode</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Anywhere Door Security & Secret Passphrase Settings Card -->
+          <div class="cms-section-card" id="cms-door-security-card" style="border-color: var(--color-primary);">
+            <div class="cms-card-header-row">
+              <h3 class="cms-section-title" style="color: var(--ink-black);"><i class="fa-solid fa-key"></i> Anywhere Door Secret Passphrase</h3>
+              <span class="status-indicator-badge" id="door-passphrase-status-badge">Customizable</span>
+            </div>
+            <p class="modal-summary">
+              Set the private secret passphrase needed to unlock the <strong>Anywhere Door</strong> from the top navigation. Keep this code secret so only you can summon the Admin Gateway.
+            </p>
+
+            <div class="form-grid-2" style="margin-top: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="cms-door-passphrase-input">Custom Door Passphrase</label>
+                <div class="cms-password-input-wrap">
+                  <input 
+                    type="password" 
+                    id="cms-door-passphrase-input" 
+                    class="form-input" 
+                    placeholder="Enter secret door passphrase..." 
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button type="button" class="btn-toggle-door-visibility" id="btn-toggle-door-visibility" title="Show/Hide passphrase" aria-label="Toggle password visibility">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Door Access Mode</label>
+                <div class="door-mode-readout">
+                  <span class="badge-active-security" id="badge-door-security-active"><i class="fa-solid fa-shield-halved"></i> Protected Gateway</span>
+                  <span class="door-hint-sub">Case-insensitive & clean matched</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cms-toolbar-row" style="margin-top: 1rem;">
+              <button type="button" class="btn-primary" id="btn-save-door-passphrase">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>Save Door Passphrase</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-reset-door-passphrase">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Reset to Default</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="cms-section-card">
+            <h3 class="cms-section-title"><i class="fa-solid fa-download"></i> Data Portability & JSON Backups</h3>
+            <p class="modal-summary">
+              Export your entire customized portfolio configuration as a portable JSON file, or restore from a previously saved backup file.
+            </p>
+
+            <div class="modal-actions-row" style="border: none; padding: 0;">
+              <button type="button" class="btn-primary" id="btn-export-json">
+                <i class="fa-solid fa-download"></i>
+                <span>Export Portfolio JSON</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-trigger-import">
+                <i class="fa-solid fa-upload"></i>
+                <span>Import JSON File</span>
+              </button>
+              <input type="file" id="json-file-input" accept=".json" style="display: none;" />
+            </div>
+          </div>
+
+          <div class="cms-section-card" style="border-color: var(--pop-coral);">
+            <h3 class="cms-section-title" style="color: var(--pop-coral);"><i class="fa-solid fa-triangle-exclamation"></i> Session & Reset Controls</h3>
+            <div class="modal-actions-row" style="border: none; padding: 0;">
+              <button type="button" class="btn-secondary" id="btn-admin-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout Admin Session</span>
+              </button>
+              <button type="button" class="btn-secondary" id="btn-reset-defaults" style="color: #ef4444;">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Reset All to Initial Defaults</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- ================= MODAL 4: NEO-BRUTALIST CONFIRMATION DIALOG ================= -->
+  <dialog id="confirm-modal" class="confirm-modal" aria-labelledby="confirm-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-content-card confirm-dialog-card">
+      <div class="confirm-header-banner" id="confirm-header">
+        <div class="confirm-icon-box">
+          <i class="fa-solid fa-triangle-exclamation" id="confirm-icon"></i>
+        </div>
+        <div class="confirm-title-group">
+          <span class="confirm-badge" id="confirm-badge">Action Confirmation</span>
+          <h3 class="confirm-title" id="confirm-title">Are you sure?</h3>
+        </div>
+      </div>
+
+      <div class="confirm-dialog-body">
+        <p class="confirm-message" id="confirm-message">
+          This action cannot be undone. Are you sure you want to proceed?
+        </p>
+        <div class="confirm-item-preview" id="confirm-item-preview" style="display: none;">
+          <!-- Dynamic Item Preview Chip -->
+        </div>
+      </div>
+
+      <div class="confirm-actions-row">
+        <button type="button" class="btn-secondary confirm-cancel-btn" id="confirm-cancel-btn">
+          <i class="fa-solid fa-xmark"></i>
+          <span>Cancel</span>
+        </button>
+        <button type="button" class="btn-primary confirm-accept-btn" id="confirm-accept-btn">
+          <i class="fa-solid fa-trash" id="confirm-accept-icon"></i>
+          <span id="confirm-accept-text">Yes, Delete</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification System -->
+  <div id="toast" class="toast" role="alert" aria-live="polite" hidden>
+    <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+    <div class="toast-message" id="toast-text">Message</div>
+  </div>
+
+  <!-- Firebase SDKs for Cloud Persistence, Auth & Storage (Compat Version) -->
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-storage-compat.js"></script>
+
+  <!-- App Script with Dynamic State Engine & CMS (Cache Busted) -->
+  <script src="js/app.js?v=4.7"></script>
+</body>
+</html>
