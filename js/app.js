@@ -71,10 +71,10 @@
     },
     r2Config: {
       accountId: "d71d00687915515fe73d9228a901b29b",
-      bucketName: "portfolio-media",
-      publicBaseUrl: "https://pub-50fe94eff2494bc0945ba23feb179bed.r2.dev",
-      accessKeyId: "ced441d315e70ad024c144d2cb24d97a",
-      secretAccessKey: "68dd22956549206a64ff4162021692dfd511d154f94a0df187ceca108eae03a8"
+      bucketName: "portfolio-data",
+      publicBaseUrl: "https://pub-b66c929dc07449fc9ca977805ca70a4f.r2.dev",
+      accessKeyId: "620049f49602ff508abf3f4e8ce8830d",
+      secretAccessKey: "b654e8ac1aea9a6ed3976daa9eb0f8b128fe21cbe24cd304770890c21cb4ddd6"
     },
     projects: [
       {
@@ -426,7 +426,9 @@
               parsed.securitySettings.doorPassphrase = "anywhere door";
             }
             if (!parsed.firebaseConfig) parsed.firebaseConfig = DEFAULT_PORTFOLIO_STATE.firebaseConfig;
-            if (!parsed.r2Config) parsed.r2Config = DEFAULT_PORTFOLIO_STATE.r2Config;
+            if (!parsed.r2Config || parsed.r2Config.bucketName === "portfolio-media") {
+              parsed.r2Config = JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_STATE.r2Config));
+            }
             return parsed;
           }
         }
@@ -2735,7 +2737,7 @@
         if (projPreviewBox) projPreviewBox.style.display = 'none';
         if (projPreviewImg) projPreviewImg.src = '';
         if (projPreviewVideo) projPreviewVideo.src = '';
-        if (projStatusHint) projStatusHint.textContent = 'Direct CDN upload to bucket: portfolio-media';
+        if (projStatusHint) projStatusHint.textContent = `Direct CDN upload to bucket: ${store.state.r2Config?.bucketName || 'portfolio-data'}`;
       });
     }
 
@@ -2910,7 +2912,7 @@
         if (previewBox) previewBox.style.display = 'none';
         if (previewImg) previewImg.src = '';
         if (previewVideo) previewVideo.src = '';
-        if (mediaStatusHint) mediaStatusHint.textContent = 'Direct CDN upload to bucket: portfolio-media';
+        if (mediaStatusHint) mediaStatusHint.textContent = `Direct CDN upload to bucket: ${store.state.r2Config?.bucketName || 'portfolio-data'}`;
       });
     }
 
@@ -3075,7 +3077,7 @@
         if (achAssetUrlInput) achAssetUrlInput.value = '';
         if (achPreviewBox) achPreviewBox.style.display = 'none';
         if (achPreviewImg) achPreviewImg.src = '';
-        if (achStatusHint) achStatusHint.textContent = 'Direct CDN upload to bucket: portfolio-media';
+        if (achStatusHint) achStatusHint.textContent = `Direct CDN upload to bucket: ${store.state.r2Config?.bucketName || 'portfolio-data'}`;
       });
     }
 
@@ -3570,7 +3572,7 @@
     const previewVideo = document.getElementById('proj-preview-video');
     if (previewVideo) previewVideo.src = '';
     const statusHint = document.getElementById('proj-upload-status-hint');
-    if (statusHint) statusHint.textContent = 'Direct CDN upload to bucket: portfolio-media';
+    if (statusHint) statusHint.textContent = `Direct CDN upload to bucket: ${store.state.r2Config?.bucketName || 'portfolio-data'}`;
     document.getElementById('project-form-heading').innerHTML = '<i class="fa-solid fa-circle-plus"></i> Add New Project';
     document.getElementById('btn-save-project').innerHTML = '<i class="fa-solid fa-plus"></i><span>Save Project</span>';
   }
@@ -3587,7 +3589,7 @@
     const previewVideo = document.getElementById('media-preview-video');
     if (previewVideo) previewVideo.src = '';
     const statusHint = document.getElementById('media-upload-status-hint');
-    if (statusHint) statusHint.textContent = 'Direct CDN upload to bucket: portfolio-media';
+    if (statusHint) statusHint.textContent = `Direct CDN upload to bucket: ${store.state.r2Config?.bucketName || 'portfolio-data'}`;
     document.getElementById('media-form-heading').innerHTML = '<i class="fa-solid fa-circle-plus"></i> Add Creative Work';
     document.getElementById('btn-save-media').innerHTML = '<i class="fa-solid fa-plus"></i><span>Save Work</span>';
   }
@@ -3606,7 +3608,7 @@
     const previewImg = document.getElementById('ach-preview-img');
     if (previewImg) previewImg.src = '';
     const statusHint = document.getElementById('ach-upload-status-hint');
-    if (statusHint) statusHint.textContent = 'Direct CDN upload to bucket: portfolio-media';
+    if (statusHint) statusHint.textContent = `Direct CDN upload to bucket: ${store.state.r2Config?.bucketName || 'portfolio-data'}`;
     document.getElementById('ach-form-heading').innerHTML = '<i class="fa-solid fa-circle-plus"></i> Add New Achievement';
     const saveBtn = document.getElementById('btn-save-achievement');
     if (saveBtn) saveBtn.innerHTML = '<i class="fa-solid fa-plus"></i><span>Save Achievement</span>';
@@ -4904,10 +4906,10 @@
     constructor() {
       this.config = store.state.r2Config || {
         accountId: "d71d00687915515fe73d9228a901b29b",
-        bucketName: "portfolio-media",
-        publicBaseUrl: "https://pub-50fe94eff2494bc0945ba23feb179bed.r2.dev",
-        accessKeyId: "ced441d315e70ad024c144d2cb24d97a",
-        secretAccessKey: "68dd22956549206a64ff4162021692dfd511d154f94a0df187ceca108eae03a8"
+        bucketName: "portfolio-data",
+        publicBaseUrl: "https://pub-b66c929dc07449fc9ca977805ca70a4f.r2.dev",
+        accessKeyId: "620049f49602ff508abf3f4e8ce8830d",
+        secretAccessKey: "b654e8ac1aea9a6ed3976daa9eb0f8b128fe21cbe24cd304770890c21cb4ddd6"
       };
       this.uploadHistory = [];
       this.init();
